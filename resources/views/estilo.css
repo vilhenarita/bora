@@ -1,0 +1,55 @@
+
+body{
+    background-image: url(img/_DSC3484.jpg);
+    background-repeat:repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+
+}
+
+.navbar{
+    background: none !important;
+    margin-top: 30px !important;
+    display: table;
+}
+
+.estilo-green{
+    background-color: #2E7D32 !important;
+    border: none !important;
+}
+
+.margin-geral{
+    margin-top: 12%;
+    margin-bottom: 5%;
+}
+
+.botao{
+    margin: 5px !important;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+}
+
+.alinhamento{
+    margin-top:0.5%;
+    position: absolute;
+    right: 5%;
+}
+
+.text-login{
+    color: #2E7D32;
+}
+
+.alinhamento-login{
+    margin-left: auto;
+    margin-right: auto;
+    width: 6em;
+    color: white;
+}
+
+.login{
+    margin-top: 5%;
+}
+
+.logo{
+    width: 13%;
+}

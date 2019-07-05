@@ -12,6 +12,7 @@ class TuristaSeeder extends Seeder
      */
     public function run()
     {
+        DB::table('turistas')->delete();
         factory(Turista::class, 10)->create();
     }
 }

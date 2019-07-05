@@ -13,7 +13,7 @@ class CreateFeedbacksTable extends Migration
      */
     public function up()
     {
-        Schema::create('feedbacks', function (Blueprint $table) {
+        Schema::create('feedback', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('stars');
             $table->string('title');

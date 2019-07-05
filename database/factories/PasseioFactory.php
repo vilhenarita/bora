@@ -26,7 +26,7 @@ $factory->define(Passeio::class, function (Faker $faker) {
         'status' => $faker->sentence(),
         'guia_id' => random_int(1, 10),
         'turista_id' => random_int(1, 10),
-        'average_rating' => $faker->randomFloat(),
+        'average_rating' => random_int(0, 5),
         'num_feedback' => $faker->sentence()
     ];
 });

@@ -12,12 +12,37 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
+});
+
+Route::get('/escolha_login', function () {
+    return view('escolha_login');
+});
+#Rota do turista
+Route::prefix('turista')->group(function () {
+    Route::get('/login', function () {
+    	return view('login_turista');
+	});
+
+	Route::get('/cadastro', function () {
+    	return view('cadastro_turista');
+	});
+
+	Route::get('/authentication', 'TuristaController@authentication')->name('authentication_turista');
+});
+#Rotas do guia
+Route::prefix('guia')->group(function () {
+    Route::get('/login', function () {
+    	return view('login_guia');
+	});
+	Route::get('/cadastro', function () {
+    	return view('cadastro_guia');
+	});
+
+	Route::get('/authentication', 'TuristaController@authentication')->name('authentication_guia');
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/guia', 'GuiaController@guia')->name('cadastro_guia');
-Route::get('/turista', 'TuristaController@turista')->name('cadastro_turista');
+// Route::get('/turista', 'TuristaController@showCadastro');#Qual a diferença de colocar um name na rota?

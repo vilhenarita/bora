@@ -7,7 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="estilo.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('css/estilo.css') }}" crossorigin="anonymous">
 
     <title>Bem Vindo ao Bora</title>
   </head>
@@ -21,7 +21,8 @@
                 <ul class="navbar-nav mr-auto">
                   <li class="nav-item active">
                     <!-- <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> -->
-                    <a class="nav-link text-white" href="index.html"><img src="img/logo.png" class="img-fluid" alt="Responsive image"></a>
+                    <a class="nav-link text-white" href="/"><img src="{{ asset('img/logo.png') }}" class="img-fluid logo" alt="Responsive image"></a>
+                    
                   </li>
                   <div class="alinhamento">
                     <div class="row">
@@ -29,7 +30,7 @@
                             <a class="nav-link text-white" href="#"> <h5>Passeios</h5></a>
                         </li>
                         <li class="nav-item text-right">
-                            <a class="nav-link text-white" href="escolha_login.html"> <h5>Login</h5></a>
+                            <a class="nav-link text-white" href="/escolha_login"> <h5>Login</h5></a>
                         </li>
                     </div>
                   </div>
@@ -41,19 +42,7 @@
             </nav>
           </div>
         </div>
-        <div class="row margin-geral">
-          <div class="col">
-            <h1 class="text-center text-white">Bem vindo a área de login<span class="badge badge-secondary"></span></h1>
-          </div>
-        </div>
-        <div class="row margin-botao">
-          <div class="col">
-            <div class="text-center">
-              <a href="login_turista.html" class="estilo-green btn btn-primary btn-lg active botao" role="button" aria-pressed="true">Sou Turista</a>
-              <a href="login_guia.html" class="estilo-green btn btn-primary btn-lg active botao" role="button" aria-pressed="true">Sou Guia</a>
-            </div>
-          </div>
-        </div>
+        @yield('conteudo')
     </div>
 
     <!-- Optional JavaScript -->

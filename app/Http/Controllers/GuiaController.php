@@ -10,4 +10,11 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 class GuiaController extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+    public function showCadastro()
+    {
+        //show the form
+
+        return View::make('turista');
+    }
 }

@@ -24,7 +24,7 @@ class TuristaController extends TuristaAPIController
      */
     public function create()
     {
-        //
+        return view('cadastro_turista');
     }
 
     /**
@@ -35,7 +35,8 @@ class TuristaController extends TuristaAPIController
      */
     public function store(Request $request)
     {
-        //
+        $turista = parent::store($request);
+        dd($turista);
     }
 
     /**

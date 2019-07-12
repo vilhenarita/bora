@@ -65,7 +65,7 @@
                     <div class="form-row">
                         <div class="form-group col-md-4">
                             <div class="form-check">
-                                <input class="form-check-input" name="has_cnh" type="checkbox" id="gridCheck" value="1">
+                                <input class="form-check-input" name="has_cnh" type="checkbox" id="gridCheck" value="0">
                                 <label class="form-check-label" for="gridCheck">
                                     Tenho CNH
                                 </label>
@@ -73,7 +73,7 @@
                         </div>
                         <div class="form-group col-md-4">
                             <div class="form-check ">
-                                <input class="form-check-input" name="has_english" type="checkbox" id="gridCheck" value="1">
+                                <input class="form-check-input" name="has_english" type="checkbox" id="gridCheck" value="0">
                                 <label class="form-check-label" for="gridCheck">
                                     Falo inglês
                                 </label>
@@ -81,7 +81,7 @@
                         </div>
                         <div class="form-group col-md-4">
                             <div class="form-check ">
-                                <input class="form-check-input" name="has_car" type="checkbox" id="gridCheck" value="1">
+                                <input class="form-check-input" name="has_car" type="checkbox" id="gridCheck" value="0">
                                 <label class="form-check-label" for="gridCheck">
                                     Tenho carro
                                 </label>

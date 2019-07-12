@@ -18,6 +18,10 @@ Route::get('/', function () {
 Route::get('/escolha_login', function () {
     return view('escolha_login');
 });
+
+Route::get('/passeios', function () {
+    return view('passeios');
+});
 #Rota do turista
 Route::prefix('turista')->group(function () {
     /*Route::get('/login', function () {

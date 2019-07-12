@@ -19,30 +19,31 @@ Route::get('/escolha_login', function () {
     return view('escolha_login');
 });
 #Rota do turista
-Route::resource('turistas', 'TuristaController');
 
 Route::prefix('turista')->group(function () {
-    /*Route::get('/login', function () {
+    Route::get('/login', function () {
     	return view('login_turista');
 	});
 
-	Route::get('/cadastro', function () {
+
+	/*Route::get('/cadastro', function () {
     	return view('cadastro_turista');
 	}); */
 
 	Route::get('/authentication', 'TuristaController@authentication')->name('authentication_turista');
 });
-
+Route::resource('turistas', 'TuristaController');
 Route::resource('guias', 'GuiaController');
-
 Route::resource('passeios', 'PasseioController');
 
 #Rotas do guia
 Route::prefix('guia')->group(function () {
-    /*Route::get('/login', function () {
+    Route::get('/login', function () {
     	return view('login_guia');
 	});
-	Route::get('/cadastro', function () {
+
+
+	/*Route::get('/cadastro', function () {
     	return view('cadastro_guia');
 	});*/
 

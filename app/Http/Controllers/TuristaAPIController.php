@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use App\Turista;
 use App\Http\Resources\TuristaCollection;
 use App\Http\Resources\TuristaResource;
- 
+
+use Illuminate\Http\Request;
 class TuristaAPIController extends Controller
 {
     public function index()
@@ -30,7 +31,7 @@ class TuristaAPIController extends Controller
         return new TuristaResource($turista);
     }
 
-    public function destroy(Request $request, Turista $turista)
+    public function destroy(Turista $turista)
     {
         $turista->delete();
 

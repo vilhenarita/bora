@@ -20,19 +20,21 @@ Route::get('/escolha_login', function () {
 });
 #Rota do turista
 Route::prefix('turista')->group(function () {
-    Route::get('/login', function () {
+    /*Route::get('/login', function () {
     	return view('login_turista');
 	});
 
 	Route::get('/cadastro', function () {
     	return view('cadastro_turista');
-	});
+	}); */
 
 	Route::get('/authentication', 'TuristaController@authentication')->name('authentication_turista');
 });
+
 Route::resource('guias', 'GuiaController');
 
 Route::resource('turistas', 'TuristaController');
+
 #Rotas do guia
 Route::prefix('guia')->group(function () {
     /*Route::get('/login', function () {

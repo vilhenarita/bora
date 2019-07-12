@@ -3,7 +3,7 @@
         <div class="row login">
                 <div class="col-md-6 alinhamento-login">
                     <h3>Cadastro de turista</h3>
-                    <form>
+                    <form method="post" action="{{'turistas.create'}}">
                             <div class="form-row">
                               <div class="form-group col-md-6">
                                 <label for="inputEmail4">Primeiro nome</label>

@@ -81,6 +81,6 @@ class TuristaController extends TuristaAPIController
      */
     public function destroy(Turista $turista)
     {
-        //
+
     }
 }

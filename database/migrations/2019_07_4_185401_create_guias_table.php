@@ -15,7 +15,8 @@ class CreateGuiasTable extends Migration
     {
         Schema::create('guias', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('img');
+            $table->string('img')->nullable();
+            $table->string('first_name');
             $table->string('last_name');
             $table->string('email');
             $table->date('birthday');

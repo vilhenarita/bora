@@ -30,14 +30,17 @@ Route::prefix('turista')->group(function () {
 
 	Route::get('/authentication', 'TuristaController@authentication')->name('authentication_turista');
 });
+Route::resource('guias', 'GuiaController');
+
+Route::resource('turistas', 'TuristaController');
 #Rotas do guia
 Route::prefix('guia')->group(function () {
-    Route::get('/login', function () {
+    /*Route::get('/login', function () {
     	return view('login_guia');
 	});
 	Route::get('/cadastro', function () {
     	return view('cadastro_guia');
-	});
+	});*/
 
 	Route::get('/authentication', 'TuristaController@authentication')->name('authentication_guia');
 });

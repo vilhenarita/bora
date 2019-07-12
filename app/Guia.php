@@ -12,7 +12,7 @@ class Guia extends Model
      * @var array
      */
     protected $fillable = [
-        'img', 'last_name', 'email', 'birthday', 'password', 'gender', 'phone', 'rg', 'cpf', 'has_english', 'has_cnh', 'has_car'
+        'img', 'first_name','last_name', 'email', 'birthday', 'password', 'gender', 'phone', 'rg', 'cpf', 'has_english', 'has_cnh', 'has_car'
     ];
 
     /**

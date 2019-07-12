@@ -2,56 +2,85 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Foundation\Bus\DispatchesJobs;
-use Illuminate\Routing\Controller as BaseController;
-use Illuminate\Foundation\Validation\ValidatesRequests;
-use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
-
 use App\Passeio;
-use  Illuminate\Http\Request;
+use Illuminate\Http\Request;
 
 class PasseioController extends PasseioAPIController
 {
-    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
-
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
-        $passeios = parent::index();
-        return view('passeio.index', compact('passeios'));
+        //
     }
 
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function create()
     {
-        return view('passeios.create');
+        return view('cadastro_passeio');
     }
 
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
     public function store(Request $request)
     {
-        parent::store($request);
-        return redirect()->route('passeio.index')->with('message', 'Passeio criado com sucesso');
+        $passeio = parent::store($request);
+        dd($passeio);
     }
 
-    public function show($id)
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Passeio  $passeio
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Passeio $passeio)
     {
-        return view('passeio.show', ['passeio' => parent::show($id)]);
+        //
     }
 
-    public function edit($id)
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Passeio  $passeio
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(Passeio $passeio)
     {
-        $passeio = Passeio::findOrFail($id);
-        return view('passeios.edit',compact('passeio'));
+        //
     }
 
-    public function update(Request $request, $id)
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Passeio  $passeio
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, Passeio $passeio)
     {
-        parent::update($request,$id);
-        return redirect()->route('products.index')->with('message', 'Product updated successfully!');
+        //
     }
 
-    public function destroy($id)
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Passeio  $passeio
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(Passeio $passeio)
     {
-        $product = P::findOrFail($id);
-        $product->delete();
-        return redirect()->route('products.index')->with('alert-success','Product hasbeen deleted!');
+        //
     }
 }

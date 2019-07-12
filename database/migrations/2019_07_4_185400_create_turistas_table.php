@@ -15,7 +15,7 @@ class CreateTuristasTable extends Migration
     {
         Schema::create('turistas', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('img');
+            $table->string('img')->nullable();
             $table->string('name');
             $table->string('last_name');
             $table->string('email');

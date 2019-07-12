@@ -19,6 +19,8 @@ Route::get('/escolha_login', function () {
     return view('escolha_login');
 });
 #Rota do turista
+Route::resource('turistas', 'TuristaController');
+
 Route::prefix('turista')->group(function () {
     /*Route::get('/login', function () {
     	return view('login_turista');
@@ -33,7 +35,7 @@ Route::prefix('turista')->group(function () {
 
 Route::resource('guias', 'GuiaController');
 
-Route::resource('turistas', 'TuristaController');
+Route::resource('passeios', 'PasseioController');
 
 #Rotas do guia
 Route::prefix('guia')->group(function () {

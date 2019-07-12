@@ -2,32 +2,85 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Foundation\Bus\DispatchesJobs;
-use Illuminate\Routing\Controller as BaseController;
-use Illuminate\Foundation\Validation\ValidatesRequests;
-use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
-use View;
+use App\Turista;
+use Illuminate\Http\Request;
 
-class TuristaController extends BaseController
+class TuristaController extends TuristaAPIController
 {
-    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
-
-    public function authentication()
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
     {
-        $first_name = $request->input('first_name');       
-        $last_name = $request->input('last_name');
-        $email = $request->input('email');
-        $senha = $request->input('senha');
-        $rg = $request->input('rg');
-        $cpf = $request->input('cpf');
-        $data_nasc = $request->input('data_nasc');
-        $genero = $request->input('genero');
-        $fone = $request->input('fone');
-        $img = $request->input('img');
-
-        
-
+        //
     }
 
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        return view('cadastro_turista');
+    }
 
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        $turista = parent::store($request);
+        dd($turista);
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Turista  $turista
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Turista $turista)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Turista  $turista
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(Turista $turista)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Turista  $turista
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, Turista $turista)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Turista  $turista
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(Turista $turista)
+    {
+
+    }
 }

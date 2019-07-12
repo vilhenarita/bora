@@ -15,7 +15,8 @@ class CreateGuiasTable extends Migration
     {
         Schema::create('guias', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('img');
+            $table->string('img')->nullable();
+            $table->string('first_name');
             $table->string('last_name');
             $table->string('email');
             $table->date('birthday');
@@ -24,9 +25,9 @@ class CreateGuiasTable extends Migration
             $table->string('phone');
             $table->string('rg');
             $table->string('cpf');
-            $table->boolean('has_english');
-            $table->boolean('has_cnh');
-            $table->boolean('has_car');
+            $table->boolean('has_english')->default(false);
+            $table->boolean('has_cnh')->default(false);
+            $table->boolean('has_car')->default(false);
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
         });

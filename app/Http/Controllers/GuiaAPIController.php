@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use App\Guia;
 use App\Http\Resources\GuiaCollection;
 use App\Http\Resources\GuiaResource;
- 
+
+use Illuminate\Http\Request;
 class GuiaAPIController extends Controller
 {
     public function index()
@@ -30,7 +31,7 @@ class GuiaAPIController extends Controller
         return new GuiaResource($guia);
     }
 
-    public function destroy(Request $request, Guia $guia)
+    public function destroy(Guia $guia)
     {
         $guia->delete();
 

@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use App\Passeio;
 use App\Http\Resources\PasseioCollection;
 use App\Http\Resources\PasseioResource;
- 
+
+use Illuminate\Http\Request;
 class PasseioAPIController extends Controller
 {
     public function index()
@@ -30,7 +31,7 @@ class PasseioAPIController extends Controller
         return new PasseioResource($passeio);
     }
 
-    public function destroy(Request $request, Passeio $passeio)
+    public function destroy(Passeio $passeio)
     {
         $passeio->delete();
 

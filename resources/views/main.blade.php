@@ -8,6 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('css/estilo.css') }}" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}" crossorigin="anonymous">
 
     <title>Bem Vindo ao Bora</title>
   </head>
@@ -27,7 +28,7 @@
                   <div class="alinhamento">
                     <div class="row">
                         <li class="nav-item text-right">
-                            <a class="nav-link text-white" href="#"> <h5>Passeios</h5></a>
+                            <a class="nav-link text-white" href="passeio"> <h5>Passeios</h5></a>
                         </li>
                         <li class="nav-item text-right">
                             <a class="nav-link text-white" href="/escolha_login"> <h5>Login</h5></a>
@@ -44,7 +45,6 @@
         </div>
         @yield('conteudo')
     </div>
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

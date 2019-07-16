@@ -54,6 +54,25 @@ body{
     width: 13%;
 }
 
-.card{
-    margin-top: 20px;
+.imagem{
+    margin-top: 80px;
+    /*border-style: solid;*/
+    /*border-width: 2px;*/
+    border-radius: 3px;
+    border-color: ;
+}
+
+.imagem-content{
+    margin-left: auto;
+    margin-right: auto;
+    width: 36em;
+    color: white;
+}
+
+.cartao{
+    margin-top: 100px;
+}
+
+.cartao-content{
+    margin-bottom: 60px;
 }

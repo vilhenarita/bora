@@ -15,11 +15,11 @@ class CreatePasseiosTable extends Migration
     {
         Schema::create('passeios', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('img');
+            $table->string('img')->nullable();
             $table->string('name');
             $table->text('description');
             $table->string('adress');
-            $table->string('status');
+            $table->boolean('status')->default(true);
             $table->unsignedBigInteger('guia_id')->nullable();
             $table->foreign('guia_id')->references('id')->on('guias');
             $table->unsignedBigInteger('turista_id')->nullable();

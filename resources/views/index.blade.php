@@ -2,7 +2,8 @@
 @section('conteudo')
         <div class="row margin-geral">
           <div class="col">
-            <h1 class="text-center text-white">Conectando você à Amazônia<span class="badge badge-secondary"></span></h1>
+              <h1 class="text-center text-white">Cadastre-se no Bora!<span class="badge badge-secondary"></span></h1>
+              <h3 class="text-center text-white">Conecte-se à Amazônia<span class="badge badge-secondary"></span></h3>
           </div>
         </div>
         <div class="row margin-botao">

@@ -42,18 +42,21 @@ Route::resource('passeios', 'PasseioController');
 
 #Rotas do guia
 Route::prefix('guia')->group(function () {
-    Route::get('/login', function () {
-    	return view('login_guia');
-	});
+ //    Route::get('/login', function () {
+ //    	return view('login_guia');
+	// });
 
 
-	/*Route::get('/cadastro', function () {
+	Route::get('/cadastro', function () {
     	return view('cadastro_guia');
-	});*/
-
-	Route::get('/authentication', 'TuristaController@authentication')->name('authentication_guia');
+	});
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::post('/GuiaAuthenticate', 'GuiaController@authenticate')->name('authenticate_guia');
+Route::get('/login_guia', function () {
+        return view('login_guia');
+    });

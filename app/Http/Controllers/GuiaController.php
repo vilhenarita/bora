@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Guia;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class GuiaController extends GuiaAPIController
 {
@@ -82,5 +83,15 @@ class GuiaController extends GuiaAPIController
     public function destroy(Guia $guia)
     {
         //
+    }
+
+    public function authenticate(Request $request)
+    {
+        $credentials = $request->only('email', 'password');
+
+        if (Auth::attempt($credentials)) {
+            // Authentication passed...
+            return redirect()->intended('passeio');
+        }
     }
 }

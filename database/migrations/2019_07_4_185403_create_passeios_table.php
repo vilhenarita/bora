@@ -22,8 +22,8 @@ class CreatePasseiosTable extends Migration
             $table->boolean('status')->default(true);
             $table->unsignedBigInteger('guia_id')->nullable();
             $table->foreign('guia_id')->references('id')->on('guias');
-            $table->unsignedBigInteger('turista_id')->nullable();
-            $table->foreign('turista_id')->references('id')->on('turistas');
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->foreign('user_id')->references('id')->on('users');
             $table->float('average_rating')->nullable();
             $table->string('num_feedback')->default(0);
             $table->timestamp('created_at')->nullable();

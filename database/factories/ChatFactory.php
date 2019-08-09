@@ -22,6 +22,6 @@ $factory->define(Chat::class, function (Faker $faker) {
         'message' => $faker->realText(),
         'date' => $faker->dateTimeBetween('-30 years', 'now'),
         'guia_id' => random_int(1, 10),
-        'turista_id' => random_int(1, 10)
+        'user_id' => random_int(1, 10)
     ];
 });

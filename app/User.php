@@ -2,21 +2,17 @@
 
 namespace App;
 
-use Illuminate\Notifications\Notifiable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    use Notifiable;
-
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'img', 'name', 'last_name', 'email', 'birthday', 'password', 'gender', 'phone', 'rg', 'cpf'
     ];
 
     /**
@@ -25,7 +21,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password'
     ];
 
     /**
@@ -34,6 +30,53 @@ class User extends Authenticatable
      * @var array
      */
     protected $casts = [
-        'email_verified_at' => 'datetime',
+        'img' => 'string',
+        'name' => 'string',
+        'last_name' => 'string',
+        'email' => 'string',
+        'birthday' => 'date',
+        'password' => 'string',
+        'gender' => 'string',
+        'phone' => 'string',
+        'rg' => 'string',
+        'cpf' => 'string',
+        'created_at' => 'timestamp',
+        'updated_at' => 'timestamp'
     ];
+
+    /**
+     * Get the Passeios for the Turista.
+     */
+    public function passeios()
+    {
+        return $this->hasMany(\App\Passeio::class);
+    }
+
+
+    /**
+     * Get the Contrato_passeios for the Turista.
+     */
+    public function contratoPasseios()
+    {
+        return $this->hasMany(\App\Contrato_passeio::class);
+    }
+
+
+    /**
+     * Get the Feedbacks for the Turista.
+     */
+    public function feedbacks()
+    {
+        return $this->hasMany(\App\Feedback::class);
+    }
+
+
+    /**
+     * Get the Chats for the Turista.
+     */
+    public function chats()
+    {
+        return $this->hasMany(\App\Chat::class);
+    }
+
 }

@@ -23,9 +23,9 @@ $factory->define(Passeio::class, function (Faker $faker) {
         'name' => $faker->name(),
         'description' => $faker->realText(),
         'adress' => $faker->sentence(),
-        'status' => $faker->sentence(),
+        'status' => random_int(0, 1),
         'guia_id' => random_int(1, 10),
-        'turista_id' => random_int(1, 10),
+        'user_id' => random_int(1, 10),
         'average_rating' => random_int(0, 5),
         'num_feedback' => $faker->sentence()
     ];

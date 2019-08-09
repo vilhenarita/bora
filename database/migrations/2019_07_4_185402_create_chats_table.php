@@ -19,8 +19,8 @@ class CreateChatsTable extends Migration
             $table->timestamp('date')->nullable();
             $table->unsignedBigInteger('guia_id')->nullable();
             $table->foreign('guia_id')->references('id')->on('guias');
-            $table->unsignedBigInteger('turista_id')->nullable();
-            $table->foreign('turista_id')->references('id')->on('turistas');
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
         });

@@ -22,7 +22,7 @@ $factory->define(Feedback::class, function (Faker $faker) {
         'stars' => random_int(-2147483648, 2147483647),
         'title' => $faker->words(3, true),
         'description' => $faker->realText(),
-        'turista_id' => random_int(1, 10),
+        'user_id' => random_int(1, 10),
         'passeio_id' => random_int(1, 10)
     ];
 });

@@ -2,10 +2,12 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 
-class Guia extends Model
+class Guia extends Authenticatable
 {
+    use Notifiable;
     /**
      * The attributes that are mass assignable.
      *
@@ -31,6 +33,7 @@ class Guia extends Model
      */
     protected $casts = [
         'img' => 'string',
+        'first_name' => 'string',
         'last_name' => 'string',
         'email' => 'string',
         'birthday' => 'date',

@@ -19,7 +19,7 @@ use Carbon\Carbon;
 
 $factory->define(Contrato_passeio::class, function (Faker $faker) {
     return [
-        'turista_id' => random_int(1, 10),
+        'user_id' => random_int(1, 10),
         'observacao' => $faker->sentence(),
         'passeio_id' => random_int(1, 10)
     ];

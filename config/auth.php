@@ -15,7 +15,7 @@ return [
 
     'defaults' => [
         'guard' => 'web',
-        'passwords' => 'Turistas',
+        'passwords' => 'users',
     ],
 
     /*
@@ -39,6 +39,11 @@ return [
         'web' => [
             'driver' => 'session',
             'provider' => 'users',
+        ],
+
+        'guia' => [
+            'driver' => 'session',
+            'provider' => 'guias',
         ],
 
         'api' => [
@@ -70,6 +75,12 @@ return [
             'driver' => 'eloquent',
             'model' => App\User::class,
         ],
+
+        'guias' => [
+            'driver' => 'eloquent',
+            'model' => App\Guia::class,
+        ],
+
 
         // 'users' => [
         //     'driver' => 'database',

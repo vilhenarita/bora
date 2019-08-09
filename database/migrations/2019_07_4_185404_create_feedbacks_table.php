@@ -18,8 +18,8 @@ class CreateFeedbacksTable extends Migration
             $table->integer('stars');
             $table->string('title');
             $table->text('description');
-            $table->unsignedBigInteger('turista_id')->nullable();
-            $table->foreign('turista_id')->references('id')->on('turistas');
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->foreign('user_id')->references('id')->on('users');
             $table->unsignedBigInteger('passeio_id')->nullable();
             $table->foreign('passeio_id')->references('id')->on('passeios');
             $table->timestamp('created_at')->nullable();

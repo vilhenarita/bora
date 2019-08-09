@@ -1,9 +1,9 @@
 <?php
 
-use App\Turista;
+use App\User;
 use Illuminate\Database\Seeder;
 
-class TuristaSeeder extends Seeder
+class UserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,7 +12,7 @@ class TuristaSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('turistas')->delete();
-        factory(Turista::class, 10)->create();
+        DB::table('users')->delete();
+        factory(User::class, 10)->create();
     }
 }

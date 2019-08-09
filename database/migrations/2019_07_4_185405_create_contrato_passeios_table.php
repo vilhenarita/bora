@@ -15,8 +15,8 @@ class CreateContratoPasseiosTable extends Migration
     {
         Schema::create('contrato_passeios', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('turista_id')->nullable();
-            $table->foreign('turista_id')->references('id')->on('turistas');
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->foreign('user_id')->references('id')->on('users');
             $table->string('observacao');
             $table->unsignedBigInteger('passeio_id')->nullable();
             $table->foreign('passeio_id')->references('id')->on('passeios');

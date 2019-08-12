@@ -29,11 +29,25 @@ Route::get('/escolha_login', function () {
     return view('escolha_login');
 });
 
-Route::get('/passeio', function () {
-    return view('passeio');
-});
+Route::get('/passeio', [
 
-Route::resource('turistas', 'TuristaController');
+    'as'    =>  'passeio',
+    'uses'  =>  'PasseioController@consultaTurista'
+
+]);
+
+Route::get('/visualizar_passeio/{id}', [
+
+    'as'    =>  'visualizar_passeio',
+    'uses'  =>  'PasseioController@visualizarPasseio'
+
+]);
+
+//Route::get('/passeio', function () {
+//    return view('passeio');
+//});
+
+Route::resource('users', 'UserController');
 Route::resource('guias', 'GuiaController');
 Route::resource('passeios', 'PasseioController');
 

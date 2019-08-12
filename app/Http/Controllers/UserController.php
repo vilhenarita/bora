@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Turista;
+use App\User;
 use Illuminate\Http\Request;
 
-class TuristaController extends TuristaAPIController
+class UserController extends UserAPIController
 {
     /**
      * Display a listing of the resource.
@@ -35,17 +35,17 @@ class TuristaController extends TuristaAPIController
      */
     public function store(Request $request)
     {
-        $turista = parent::store($request);
-        dd($turista);
+        $user = parent::store($request);
+        dd($user);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Turista  $turista
+     * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function show(Turista $turista)
+    public function show(User $user)
     {
         //
     }
@@ -53,10 +53,10 @@ class TuristaController extends TuristaAPIController
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Turista  $turista
+     * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function edit(Turista $turista)
+    public function edit(User $user)
     {
         //
     }
@@ -65,10 +65,10 @@ class TuristaController extends TuristaAPIController
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Turista  $turista
+     * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Turista $turista)
+    public function update(Request $request, User $user)
     {
         //
     }
@@ -76,10 +76,10 @@ class TuristaController extends TuristaAPIController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Turista  $turista
+     * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Turista $turista)
+    public function destroy(User $user)
     {
 
     }

@@ -83,4 +83,34 @@ class PasseioController extends PasseioAPIController
     {
         //
     }
+
+    public function consultaTurista()
+    {
+        $passeios = Passeio::Select('passeios.*')
+            ->get(); //armazena todas os usuarios cadatrados na variavel turista
+
+        return view('passeio', ['passeios' => $passeios]);   //retorna via view os resultados em lista
+    }
+
+    public function visualizarPasseio($id = false)
+    {
+    
+        $passeio = Passeio::find($id);
+        var_dump($passeio);
+
+        $guia = Guia::find($passeio->guia_id);
+
+
+        $valores = array(
+
+            "guia" => $guia,
+            "passeio" => $passeio,
+
+        );
+
+        var_dump($valores);
+        return view('visualizar_passeio', $valores);
+
+
+    }
 }

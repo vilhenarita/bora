@@ -27,7 +27,7 @@ Route::resource('guias', 'GuiaAPIController', [
     'only' => ['index', 'show', 'store', 'update', 'destroy']
 ]);
 
-Route::resource('turistas', 'TuristaAPIController', [
+Route::resource('users', 'UserAPIController', [
     'only' => ['index', 'show', 'store', 'update', 'destroy']
 ]);
 

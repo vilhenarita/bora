@@ -3,7 +3,7 @@
         <div class="row login">
                 <div class="col-md-6 alinhamento-login">
                     <h3>Cadastro de turista</h3>
-                    <form method="post" action="{{route('turistas.store')}}">
+                    <form method="post" action="{{route('users.store')}}">
                         @csrf
                             <div class="form-row">
                               <div class="form-group col-md-6">

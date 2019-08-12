@@ -9,7 +9,7 @@
         <div class="row margin-botao">
           <div class="col">
             <div class="text-center">
-              <a href="turistas/create" class="estilo-green btn btn-primary btn-lg active botao" role="button" aria-pressed="true">Turista</a>
+              <a href="users/create" class="estilo-green btn btn-primary btn-lg active botao" role="button" aria-pressed="true">Turista</a>
               <a href="guias/create" class="estilo-green btn btn-primary btn-lg active botao" role="button" aria-pressed="true">Guia</a>
             </div>
           </div>
